@@ -1,0 +1,29 @@
+/* Card hover effect */
+.p-card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.p-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Property image wrapper for heart icon */
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Heart button over image */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Card title/content spacing */
+.card-content {
+  padding: 0.5rem 0;
+}

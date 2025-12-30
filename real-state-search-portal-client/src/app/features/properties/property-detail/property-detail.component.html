@@ -1,0 +1,20 @@
+<div class="container mt-4" *ngIf="property">
+    <div class="row">
+        <h1>Property Detail</h1>
+        <!-- Placeholder image -->
+        <div class="col-md-7 mt-3">
+
+            <div class="col-md-5">
+                <h3>{{ property.title }}</h3>
+                <p><strong>Address:</strong> {{ property.address }}</p>
+                <p><strong>Price:</strong> ${{ property.price }}</p>
+                <p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
+                <p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+
+                <button pButton icon="pi pi-heart" label="Add to Favorites" class="p-button-danger"
+                    (click)="favorite()">
+                </button>
+            </div>
+
+        </div>
+    </div>

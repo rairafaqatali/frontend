@@ -1,0 +1,50 @@
+<div class="container mt-5" style="max-width: 420px;">
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <h4 class="text-center mb-3">Login</h4>
+
+      <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label class="form-label">Email</label>
+          <input class="form-control"
+                 type="email"
+                 formControlName="email">
+          <div class="text-danger small"
+               *ngIf="this.form.get('email')?.touched && this.form.get('email')?.invalid">
+            Valid email is required
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input class="form-control"
+                 type="password"
+                 formControlName="password">
+          <div class="text-danger small"
+               *ngIf="this.form.get('password')?.touched && this.form.get('password')?.invalid">
+            Password is required
+          </div>
+        </div>
+
+        <!-- SERVER ERROR -->
+        <div *ngIf="serverError" class="alert alert-danger">
+          {{ serverError }}
+        </div>
+
+        <button pButton
+                type="submit"
+                label="Login"
+                class="w-100"
+                [disabled]="loading">
+        </button>
+      </form>
+
+      <div class="text-center mt-3">
+        <a routerLink="/register">Create new account</a>
+      </div>
+    </div>
+  </div>
+</div>
