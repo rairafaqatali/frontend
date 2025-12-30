@@ -17,6 +17,10 @@ This project is the **Angular 13 frontend** for the Real Estate Search Portal ap
 
 ## Application Configuration
 
+After all the required dependencies are configured,
+run **npm i**
+and then **ng serve**
+
 ### Environment Settings
 
 API base URL is configured via Angular environments.
@@ -29,7 +33,3 @@ export const environment = {
   apiBaseUrl: 'http://localhost:5000'
 };
 
-## Run the project
-After all the required dependencies aer configured,
-run npm i
-and then ng serve
